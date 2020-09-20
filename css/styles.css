@@ -361,23 +361,37 @@ a {
     display: flex;
 }
 
+div.caption-label>img {
+    display: block;
+  }
+
+.caption-label {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
 .caption-text {
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    color: #ffffff;
-    margin: 0px;
-    background-color: rgba(47, 48, 58, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     width: 100%;
     height: 70px;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0px;
+    right: 0;
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--primary-white-color);
 }
+
 
 .team-img {
     margin-right: 30px;
@@ -423,21 +437,17 @@ a {
     border-radius: 50%;
     background-position: center;
     background-size: contain;
+    fill: #AFB1B8; 
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
     width: 20px;
     height: 20px;
-    fill: #AFB1B8; 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-link:hover {
     background-color: var(--accent-color);
-}
-
-.social-icon-link:hover .social-icon{
     fill: #ffffff;
 }
 
@@ -630,7 +640,8 @@ a {
     font-size: 14px;
     line-height: 1.7;
     color: #FFFFFF;
-    margin-top: 20px;    
+    margin-top: 20px; 
+    margin-right: 70px;   
 }
 
 .logo-title-footer {
@@ -657,11 +668,12 @@ a {
 
 .flex {
     display: flex;
+    align-items: baseline;
 }
 
 .address-footer {
     display: block;
-    margin-right: 156px;
+    
 }
 
 .invitation {
@@ -748,6 +760,14 @@ a {
 
 .invitation-item-flex {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 93px;
+}
+
+.button-footer-item {
+    margin-left: 12px;
 }
     
 .invitation-item-flex-label {
@@ -776,6 +796,7 @@ a {
     width: 44px;
     height: 44px;
     background: rgba(255, 255, 255, 0.1);
+    fill: #ffffff; 
     border-radius: 50%;
     background-position: center;
     background-size: contain;
@@ -785,7 +806,7 @@ a {
 .social-icon-footer {
     width: 20px;
     height: 20px;
-    fill: #ffffff;   
+      
 }
 
 .social-icon-footer-link:hover {
@@ -886,7 +907,6 @@ a {
     border-radius: 4px;
     color: #000000;
     margin: 0;
-    margin-bottom: 20px;
 }
 
 .form-field {
@@ -913,15 +933,18 @@ a {
    justify-content: center;
 }
 
-.policy-text {font-family: Roboto;
+.policy-text {
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 0,58;
+    line-height: 0.58;
     letter-spacing: 0.03em;
     color: #757575;
-    margin-left: 8px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .button-link-form {
@@ -969,6 +992,7 @@ a {
     position: relative;
 }
 
+
 .field-wrap:focus-within > .icon-form {
     fill: #2196F3;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -998,34 +1022,51 @@ a {
     fill: #000000;
 }
 
-.checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.modal-form-field.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.icon-checkbox {
+.form-label {
+    font-family: Roboto;
+    font-style: 400;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 0.58;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-top: 20px;
+    margin-left: 7px;
+    justify-content: center;
+}
+
+.modal-link {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
     display: inline-block;
-    width: 15px;
+    line-height: 0.85;
+}
+
+.modal-form-input-checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.check-box {
+    position: absolute;
+    background-image: url(../images/icon-check.svg);
+    width: 16px;
     height: 15px;
+    left: 54px;
     border-radius: 4px;
     border: 2px solid #212121;
+   
 }
-
-.checkbox:checked + .icon-checkbox {
+.modal-form-input-checkbox:checked + .check-box {
     border-color: var(--accent-color);
-   background-color: var(--accent-color);
+    background-color: var(--accent-color);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-
-
