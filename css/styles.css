@@ -763,7 +763,11 @@ div.caption-label>img {
 .button-footer-item {
     margin-left: 12px;
 }
-    
+
+.invitation {
+    margin-right: 93px;
+}
+
 .invitation-item-flex-label {
     margin-right: 12px;
 }
