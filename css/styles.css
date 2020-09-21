@@ -371,7 +371,7 @@ div.caption-label>img {
     padding: 0;
 }
 
-.caption-text {
+.caption-block {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,6 +381,9 @@ div.caption-label>img {
     background-color: rgba(47, 48, 58, 0.8);
     bottom: 0px;
     right: 0;
+}
+
+.caption-text {
     margin: 0;
     font-family: Roboto;
     font-style: normal;
@@ -686,6 +689,7 @@ div.caption-label>img {
     line-height: 1.14;
     color: #ffffff;
     margin: 0px;
+    margin-bottom: 20px;
 }
 
 .invitation-item-social {
@@ -699,7 +703,7 @@ div.caption-label>img {
 
 .invitation-text {
     margin: 0; 
-    margin-bottom: 20px;
+    
 }
  
 .label-footer {margin-bottom: 4px;
@@ -1048,8 +1052,12 @@ div.caption-label>img {
 }
 
 .modal-form-input-checkbox {
-    appearance: none;
     position: absolute;
+    visibility: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 .check-box {
@@ -1061,6 +1069,7 @@ div.caption-label>img {
     border: 2px solid #212121;
     left: 13px;
     top: 18px;
+    cursor: pointer;
    
 }
 .modal-form-input-checkbox:checked + .check-box {
