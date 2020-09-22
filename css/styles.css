@@ -1033,8 +1033,8 @@ div.caption-label>img {
 
 .form-label {
     font-family: Roboto;
-    font-style: 400;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 0.58;
     letter-spacing: 0.01em;
